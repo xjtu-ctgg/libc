@@ -2204,8 +2204,6 @@ fn test_android(t: &Target) {
             // These are tested as part of the linux_fcntl tests since there are
             // header conflicts when including them with all the other structs.
             "termios2" => true,
-            // 'private' type
-            "prop_info" => true,
 
             // These are tested in the `linux_elf.rs` file.
             "Elf64_Phdr" | "Elf32_Phdr" => true,
@@ -2219,7 +2217,7 @@ fn test_android(t: &Target) {
             "sockaddr_vm" => true,
 
             // Extern types
-            "DIR" | "FILE" | "fpos_t" | "timezone" => true,
+            "DIR" | "FILE" | "fpos_t" | "timezone" | "prop_info" => true,
 
             _ => false,
         }
